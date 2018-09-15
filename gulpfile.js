@@ -21,6 +21,8 @@ var config = {
     }
 };
 
+gulp.task('default', ['build:vendorjs', 'build:vendorcss']);
+
 gulp.task('build:vendorjs', () => {
     return gulp.src(config.vendors.js.sources)
         .pipe(concat(config.vendors.js.dest))
